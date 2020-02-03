@@ -74,7 +74,7 @@ hr {
 #box {
   width: 50px;
   height: 215px;
-  border: solid 1px IndianRed;
+  border: solid 2px black;
   margin: auto;
   margin-top: 30px;
 }
@@ -83,7 +83,7 @@ hr {
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background-color: LightCoral;
+  background-color: red;
   margin: auto;
   margin-top: 38px;
   animation: balle;
@@ -103,4 +103,163 @@ hr {
     70% {transform: translateY(130px);}
     80% {transform: translateY(110px);}
     100% {transform: translateY(130px);}
+}
+
+/*------------------Loader----------------------- */
+
+#box2 {
+  width: 600px;
+  height: 266px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cercle1,
+#cercle2,
+#cercle3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: solid 1px black;
+  margin-left: 10px;
+}
+
+#cercle1 {
+  animation-name: load;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+#cercle2 {
+  animation-name: load;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+#cercle3 {
+  animation-name: load;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes load
+{
+  0% {background: black;}
+  100% {background: white;}
+}
+
+/*-------------------PLUSIEURS CARRES------------------*/
+
+#box3 {
+  position: relative;
+}
+
+#carre1,
+#carre2,
+#carre3,
+#carre4,
+#carre5,
+#carre6 {
+  width: 20px;
+  height: 20px;
+  background-color:Cornsilk ;
+  border: solid 1px black;
+  color: antiquewhite;
+  font-weight: bolder;
+  position: absolute;
+  animation-name: boucle;
+}
+
+#carre1 {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+#carre2 {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s
+}
+
+#carre3 {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s
+}
+
+#carre4 {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s
+}
+
+#carre5 {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 4s
+}
+
+#carre6 {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s
+}
+
+@keyframes boucle {
+  0% {
+    top: 5px;
+    left:10px;
+  }
+
+  10% {
+    top: 5px;
+    left:580px;
+    transform: rotate(360deg);
+  }
+
+  25% {
+    top: 230px;
+    left:580px;
+    transform: rotate(720deg);
+  }
+
+  35% {
+    top: 230px;
+    left:10px;
+    transform: rotate(1080deg);
+  }
+
+  50% {
+    top: 5px;
+    left:10px;
+    transform: rotate(1440deg);
+  }
+
+  60% {
+    top: 5px;
+    left:580px; 
+    transform: rotate(1800deg);
+  }
+
+  75% {
+    top: 230px;
+    left:580px;
+    transform: rotate(2160deg);
+  }
+
+  85% {
+    top: 230px;
+    left:10px;
+    transform: rotate(2520deg);
+  }
+
+  100% {
+    top: 5px;
+    left:10px;
+    transform: rotate(2880deg);
+  }
 }
